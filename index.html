@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Abel Tadesse - Professional Portfolio</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7fb;
+            color: #222;
+        }
+
+        /* Navigation */
+
+        nav {
+            background-color: #102a43;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav ul li a:hover {
+            color: #7dd3fc;
+        }
+
+        /* Hero */
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #102a43, #243b53);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 18px;
+	.hero-buttons {
+    	    display: flex;
+    	    justify-content: center;
+    	    flex-wrap: wrap;
+    	    gap: 10px;
+	}
+        }
+
+        .button {
+            display: inline-block;
+            margin: 30px 5px 0 5px;
+            padding: 12px 25px;
+            background-color: white;
+            color: #102a43;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+	    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+	
+	.cv-button {
+    	    font-size: 16px;
+    	    padding: 13px 28px;
+	}
+    	    
+        .button:hover {
+    	    background-color: #7dd3fc;
+    	    transform: translateY(-3px);
+    	    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+	}
+        }
+
+        /* Sections */
+
+        section {
+            padding: 70px 8%;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+            color: #102a43;
+        }
+
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        /* Skills */
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .skill {
+    	    background-color: white;
+    	    padding: 25px;
+      	    text-align: center;
+    	    border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	.skill:hover {
+    	    transform: translateY(-5px);
+    	    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+	}
+        .skill h3 {
+            color: #102a43;
+        }
+
+        /* Projects */
+
+	.section-intro {
+           text-align: center;
+           max-width: 750px;
+           margin: 0 auto 30px auto;
+           color: #555;
+           font-size: 16px;
+           line-height: 1.6;
+	}
+
+	.projects-container {
+    	   display: grid;
+    	   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    	   gap: 25px;
+	}
+
+	.project {
+    	   background-color: white;
+    	   padding: 30px;
+    	   border-radius: 10px;
+           box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+           transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	.project:hover {
+    	   transform: translateY(-5px);
+    	   box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+	}
+
+	.project h3 {
+    	   color: #102a43;
+           margin-bottom: 10px;
+	}
+
+	.project-detail {
+    	   max-width: 850px;
+           margin: 30px auto;
+           padding: 30px;
+           background-color: white;
+           border-radius: 10px;
+           box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+           line-height: 1.7;
+	}
+
+	.project-detail h3 {
+           color: #102a43;
+           margin-top: 25px;
+	}
+
+	.project-detail ul {
+           padding-left: 25px;
+	}
+
+	.project-detail li {
+           margin-bottom: 8px;
+	}
+
+        /* Experience */
+
+        .experience {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .job {
+     	    background-color: white;
+    	    padding: 30px;
+    	    margin-bottom: 20px;
+    	    border-left: 5px solid #102a43;
+    	    border-radius: 6px;
+    	    transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	.job:hover {
+    	    transform: translateY(-4px);
+    	    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+	}
+
+        .job h3 {
+            color: #102a43;
+        }
+
+        /* Contact */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 10px;
+            font-size: 18px;
+        }
+
+        /* Footer */
+
+        footer {
+            background-color: #102a43;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav ul li a {
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero h2 {
+        font-size: 21px;
+    }
+
+}    
+</style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <div class="logo">
+            Abel Tadesse
+        </div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+	    <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+	    <li><a href="#cv">CV</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- Home -->
+
+   <section class="hero" id="home">
+
+    <div>
+
+        <div class="profile-placeholder">
+            AT
+        </div>
+
+        <h1>Abel Tadesse</h1>
+
+        <h2 style="color: white; text-shadow: none;">
+            HR | Administration | General Services | Operations
+        </h2>
+
+        <p>
+            Welcome to my professional portfolio. I am a versatile professional
+            with interests and experience spanning management, administration,
+            human resource management, workplace operations, graphic design
+            and health-related professional development.
+        </p>
+
+        <p>
+            I am passionate about learning, solving practical problems,
+            improving workplace processes and using technology to create
+            useful solutions.
+        </p>
+
+        <div class="hero-buttons">
+    	    <a href="Abel_Tadesse_CV.pdf" class="button cv-button">Download My CV</a>
+    	    <a href="#contact" class="button">Contact Me</a>
+  </div>
+
+</section>
+
+<!-- Professional Highlights -->
+<section id="highlights">
+
+    <h2>Professional Highlights</h2>
+
+    <div class="skills-container">
+
+        <div class="skill">
+            <h3>👥 HR & Employee Relations</h3>
+            <p>
+                Experience supporting recruitment, onboarding,
+                employee relations, HR policies and workplace coordination.
+            </p>
+        </div>
+
+        <div class="skill">
+            <h3>🏢 General Services & Operations</h3>
+            <p>
+                Experience coordinating general services, cleaning operations,
+                facility activities and day-to-day workplace requirements.
+            </p>
+        </div>
+
+        <div class="skill">
+            <h3>👨‍💼 Team Supervision</h3>
+            <p>
+                Experience supervising employees, assigning duties,
+                monitoring performance and supporting staff development.
+            </p>
+        </div>
+
+        <div class="skill">
+            <h3>📊 Administration & Reporting</h3>
+            <p>
+                Experience with documentation, operational reporting,
+                Microsoft Office, Excel and data analysis.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<!-- About -->
+
+<section id="about">
+
+    <h2>About Me</h2>
+
+    <div class="about">
+
+        <p>
+            I am a management professional with an MBA and practical
+            experience across Human Resources, General Services,
+            Cleaning Operations and Facility Management.
+        </p>
+
+        <br>
+
+        <p>
+            My professional experience includes recruitment and onboarding,
+            employee relations, HR policies and compliance, payroll and
+            benefits support, training and development, employee supervision,
+            workplace inspections and day-to-day operational coordination.
+        </p>
+
+        <br>
+
+        <p>
+            I also have a background in clinical nursing, which has
+            strengthened my experience in teamwork, communication,
+            responsibility and professional service.
+        </p>
+
+        <br>
+
+        <p>
+            I have a strong interest in technology and continuous learning,
+            including Microsoft Office, Excel, data analysis and
+            AI-assisted productivity tools. I enjoy developing practical
+            digital solutions that can improve workplace processes,
+            record keeping and operational efficiency.
+        </p>
+
+        <br>
+
+        <p>
+            I believe in continuous learning, practical problem solving,
+            teamwork and creating solutions that provide meaningful value
+            to organizations and the people they serve.
+        </p>
+
+    </div>
+
+</section>
+<!-- Key Strengths -->
+<section id="strengths">
+    <h2>Key Strengths</h2>
+
+    <div class="skills-container">
+
+        <div class="skill">
+            <h3>👥 People & HR</h3>
+            <p>
+                Employee relations, recruitment, onboarding,
+                HR coordination and workplace support.
+            </p>
+        </div>
+
+        <div class="skill">
+            <h3>🏢 Operations</h3>
+            <p>
+                General services, facility coordination,
+                cleaning operations and daily workplace activities.
+            </p>
+        </div>
+
+        <div class="skill">
+            <h3>👨‍💼 Leadership</h3>
+            <p>
+                Team supervision, duty assignment, employee
+                coordination, training and performance monitoring.
+            </p>
+        </div>
+
+        <div class="skill">
+            <h3>📊 Administration</h3>
+            <p>
+                Reporting, documentation, Excel, data analysis,
+                record keeping and administrative coordination.
+            </p>
+        </div>
+
+        <div class="skill">
+            <h3>💡 Problem Solving</h3>
+            <p>
+                Identifying workplace challenges and developing
+                practical solutions to improve processes.
+            </p>
+        </div>
+
+        <div class="skill">
+            <h3>💻 Technology</h3>
+            <p>
+                Digital applications, website development,
+                AI-assisted productivity and workplace technology.
+            </p>
+        </div>
+
+    </div>
+</section>
+    <!-- Professional Experience -->
+
+<section id="experience">
+
+    <h2>Professional Experience</h2>
+
+    <div class="experience">
+
+        <div class="job">
+
+            <h3>General Service & Cleaning Officer</h3>
+
+            <p>
+                <strong>Awash Wine Share Company | February 2025 – Present</strong>
+            </p>
+
+            <p>
+                Coordinate daily cleaning operations, cleaning schedules,
+                workplace inspections, waste management and sanitation
+                activities to support a safe, clean and organized working
+                environment.
+            </p>
+
+            <p>
+                Supervise employees, assign duties, monitor attendance,
+                discipline and performance, conduct toolbox meetings,
+                provide training and coaching, and prepare operational
+                reports.
+            </p>
+
+            <p>
+                Coordinate staffing coverage, facility requirements,
+                cleaning materials and equipment, stock monitoring,
+                requisitions and proper chemical storage.
+            </p>
+
+        </div>
+
+
+        <div class="job">
+
+            <h3>HR Officer & Facility Officer</h3>
+
+            <p>
+                <strong>Awash Wine Share Company | January 2023 – January 2025</strong>
+            </p>
+
+            <p>
+                Supported Human Resource activities including recruitment,
+                onboarding, employee relations, HR policies and compliance,
+                payroll and benefits support, and training and development.
+            </p>
+
+            <p>
+                Coordinated facility operations, workplace inspections,
+                maintenance activities, space optimization and equipment
+                and material control.
+            </p>
+
+            <p>
+                Supported budgeting, expense monitoring, procurement,
+                supervision and performance monitoring through operational
+                targets and KPIs.
+            </p>
+
+        </div>
+
+
+        <div class="job">
+
+            <h3>OPD Nurse</h3>
+
+            <p>
+                <strong>Awash Wine Share Company | 2017 – 2022</strong>
+            </p>
+
+            <p>
+                Provided outpatient clinical nursing services for
+                approximately six years, supporting patient care and
+                day-to-day clinical activities.
+            </p>
+
+        </div>
+
+
+        <div class="job">
+
+            <h3>Clinical Nurse</h3>
+
+            <p>
+                <strong>Armed Force Referral Hospital | 2012 – 2013</strong>
+            </p>
+
+            <p>
+                Provided clinical nursing services and supported
+                day-to-day patient care activities within a hospital
+                environment.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- Education & Qualifications -->
+
+<section id="education">
+
+    <h2>Education & Qualifications</h2>
+
+    <div class="experience">
+
+        <div class="job">
+
+            <h3>Master of Business Administration (MBA)</h3>
+
+            <p>
+                <strong>Queens Business College</strong><br>
+                2020 – 2022<br>
+                CGPA: 3.51
+            </p>
+
+        </div>
+
+
+        <div class="job">
+
+            <h3>Bachelor of Management</h3>
+
+            <p>
+                <strong>Queens Business College</strong><br>
+                2017 – 2020<br>
+                GPA: 3.34
+            </p>
+
+        </div>
+
+
+        <div class="job">
+
+            <h3>Bachelor of Science in Nursing</h3>
+
+            <p>
+                <strong>Tropical College of Medicine</strong><br>
+                2017 – 2021<br>
+                GPA: 3.60
+            </p>
+
+        </div>
+
+
+        <div class="job">
+
+            <h3>Diploma in Clinical Nursing</h3>
+
+            <p>
+                <strong>St. Lideta Health Science College</strong><br>
+                2008 – 2010<br>
+                Average: 90.1/100
+            </p>
+
+        </div>
+
+
+        <div class="job">
+
+            <h3>Professional Development & Certifications</h3>
+
+            <p>
+                HRM Certification – Great Learning<br>
+                Intermediate Excel – TEA Consultancy<br>
+                Data Analysis<br>
+                Microsoft Office<br>
+                OpenAI / ChatGPT and AI-Assisted Productivity
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+   <!-- Skills -->
+
+<section id="skills">
+
+    <h2>Professional Skills</h2>
+
+    <div class="skills-container">
+
+        <div class="skill">
+            <h3>Human Resources & Employee Relations</h3>
+            <p>
+                Employee relations, people management, workplace communication
+                and HR support.
+            </p>
+        </div>
+
+        <div class="skill">
+            <h3>Recruitment & Onboarding</h3>
+            <p>
+                Recruitment support, employee onboarding and coordination
+                of HR-related processes.
+            </p>
+        </div>
+
+        <div class="skill">
+            <h3>HR Policies & Compliance</h3>
+            <p>
+                Supporting HR policies, workplace procedures, compliance
+                activities and employee-related processes.
+            </p>
+        </div>
+
+        <div class="skill">
+            <h3>Training & Development</h3>
+            <p>
+                Training support, employee coaching, development activities
+                and workplace learning.
+            </p>
+        </div>
+
+        <div class="skill">
+            <h3>General Services & Cleaning Operations</h3>
+            <p>
+                Cleaning operations coordination, service planning,
+                inspections, sanitation and workplace support.
+            </p>
+        </div>
+
+        <div class="skill">
+            <h3>Facility Management</h3>
+            <p>
+                Facility operations, workplace inspections, maintenance
+                coordination, equipment and material control.
+            </p>
+        </div>
+
+        <div class="skill">
+            <h3>Team Leadership & Coordination</h3>
+            <p>
+                Employee supervision, duty assignment, teamwork,
+                communication and operational coordination.
+            </p>
+        </div>
+
+        <div class="skill">
+            <h3>Microsoft Office & Excel</h3>
+            <p>
+                Microsoft Office, Excel, business documentation,
+                spreadsheets and workplace reporting.
+            </p>
+        </div>
+
+        <div class="skill">
+            <h3>Data Analysis & Reporting</h3>
+            <p>
+                Data analysis, operational reporting, documentation
+                and information organization.
+            </p>
+        </div>
+
+        <div class="skill">
+            <h3>AI-Assisted Productivity</h3>
+            <p>
+                Use of OpenAI, ChatGPT and AI-assisted productivity tools
+                to support learning and workplace tasks.
+            </p>
+        </div>
+
+        <div class="skill">
+            <h3>Problem Solving</h3>
+            <p>
+                Identifying workplace challenges and supporting practical
+                solutions through teamwork and coordination.
+            </p>
+        </div>
+
+        <div class="skill">
+            <h3>Self-Motivation & Communication</h3>
+            <p>
+                Professional communication, teamwork, self-motivation
+                and commitment to continuous improvement.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- Projects -->
+
+    <section id="projects">
+
+         <h2>Projects & Initiatives</h2>
+
+         <p class="section-intro">
+              Selected projects and practical solutions developed through my professional work and continuous learning.
+         </p>
+
+    <div class="projects-container">
+
+        <div class="project">
+
+            <h3>🍽️ Canteen Recording System</h3>
+
+            <p>
+                A computer-based system designed to record employees and
+                guests who receive lunch from a company canteen.
+            </p>
+
+            <br>
+
+            <p>
+                The system is intended to improve daily meal records,
+                reduce manual paperwork and make reporting easier.
+            </p>
+
+            <a href="#canteen-project" class="button">View Project</a>
+
+        </div>
+
+
+        <div class="project">
+
+            <h3>🧹 Cleaning Checklist Application</h3>
+
+            <p>
+                An Android application developed to support workplace
+                cleaning inspections and record cleaning activities.
+            </p>
+
+            <br>
+
+            <p>
+                The application includes employee information, cleaning
+                areas, inspection items, saving records and cleaning history.
+            </p>
+	    <a href="#cleaning-project" class="button">View Project</a>
+        </div>
+
+
+        <div class="project">
+
+            <h3>📋 Cleaning SOP & Inspection System</h3>
+
+            <p>
+                Development of practical cleaning procedures, inspection
+                checklists and operational standards for workplace cleaners.
+            </p>
+
+            <br>
+
+            <p>
+                The objective is to improve consistency, accountability,
+                service quality and workplace cleanliness.
+            </p>
+	    <a href="#sop-project" class="button">View Project</a>
+
+        </div>
+
+
+        <div class="project">
+
+            <h3>🏢 Workplace Process Improvement</h3>
+
+            <p>
+                Practical initiatives focused on improving general service,
+                facility operations, employee coordination and workplace
+                organization.
+            </p>
+
+            <br>
+
+            <p>
+                These initiatives focus on identifying operational problems
+                and developing practical solutions.
+            </p>
+	    <a href="#workplace-project" class="button">View Project</a>
+
+        </div>
+
+
+        <div class="project">
+
+            <h3>💻 Digital Learning & Application Development</h3>
+
+            <p>
+                Ongoing practical learning in website development,
+                Android application development and digital tools.
+            </p>
+
+            <br>
+
+            <p>
+                The goal is to use technology to create useful solutions
+                for organizations and everyday workplace needs.
+            </p>
+            <a href="#digital-project" class="button">View Project</a>
+
+        </div>
+
+
+        <div class="project">
+
+            <h3>🎨 Graphic Design & Creative Work</h3>
+
+            <p>
+                Developing practical skills in graphic design, visual
+                communication and digital creative projects.
+            </p>
+
+            <br>
+
+            <p>
+                This area will be expanded with selected design samples
+                as the portfolio develops.
+            </p>
+            <a href="#design-project" class="button">View Project</a>
+
+        </div>
+
+    </div>
+
+</section>
+<section id="canteen-project">
+
+    <h2>Canteen Recording System</h2>
+
+    <div class="project-detail">
+
+        <h3>🍽️ Project Overview</h3>
+
+        <p>
+            A computer-based application developed to record employees
+            and guests receiving meals from a company canteen.
+        </p>
+
+        <h3>🎯 Purpose</h3>
+
+        <p>
+            The system is designed to improve meal recording, reduce
+            manual paperwork and make daily and monthly reporting
+            easier and more organized.
+        </p>
+
+        <h3>⚙️ Key Features</h3>
+
+        <ul>
+            <li>Employee identification and meal recording</li>
+            <li>Employee records management</li>
+            <li>Guest meal recording</li>
+            <li>Daily and monthly reports</li>
+            <li>Excel report export</li>
+            <li>PDF report export</li>
+            <li>Dashboard for monitoring meal records</li>
+        </ul>
+
+        <h3>💡 Practical Value</h3>
+
+        <p>
+            The project demonstrates how a simple digital system can
+            support workplace administration, improve record keeping
+            and make operational information easier to manage.
+        </p>
+
+        <a href="#projects" class="button">Back to Projects</a>
+
+        <a href="#home" class="button">Back to Top</a>
+
+    </div>
+
+</section>
+<section id="cleaning-project">
+
+    <h2>Cleaning Checklist Application</h2>
+
+    <div class="project-detail">
+
+        <h3>🧹 Project Overview</h3>
+
+        <p>
+            A digital cleaning checklist application designed to support
+            systematic cleaning activities, employee accountability and
+            workplace inspection.
+        </p>
+
+        <h3>🎯 Purpose</h3>
+
+        <p>
+            The application helps cleaning staff record completed tasks,
+            identify cleaning areas and maintain organized inspection
+            records. It provides a structured approach to monitoring
+            cleaning activities and maintaining historical records.
+        </p>
+
+        <h3>⚙️ Key Features</h3>
+
+        <ul>
+            <li>Employee name recording</li>
+            <li>Cleaning area selection</li>
+            <li>Cleaning task checklists</li>
+            <li>Inspection type selection</li>
+            <li>Inspection and record keeping</li>
+            <li>Cleaning history</li>
+            <li>Digital record management</li>
+        </ul>
+
+        <h3>💡 Practical Value</h3>
+
+        <p>
+            The project demonstrates the use of a simple digital
+            application to support cleaning supervision, improve
+            accountability and organize workplace inspection records.
+        </p>
+
+        <a href="#projects" class="button">Back to Projects</a>
+
+        <a href="#home" class="button">Back to Top</a>
+
+    </div>
+
+<!-- Cleaning SOP & Inspection System -->
+
+<section id="sop-project">
+
+    <h2>Cleaning SOP & Inspection System</h2>
+
+    <div class="project-detail">
+
+        <h3>📋 Project Overview</h3>
+
+        <p>
+            A structured cleaning Standard Operating Procedure (SOP)
+            and inspection system designed to improve workplace
+            cleanliness, consistency, accountability and service quality.
+        </p>
+
+        <h3>🎯 Purpose</h3>
+
+        <p>
+            The system provides clear cleaning procedures,
+            responsibilities and inspection points to help ensure
+            that cleaning activities are performed consistently
+            and effectively.
+        </p>
+
+        <h3>⚙️ Key Components</h3>
+
+        <ul>
+            <li>Cleaning Standard Operating Procedures</li>
+            <li>Area-specific cleaning requirements</li>
+            <li>Daily cleaning checklists</li>
+            <li>Inspection and verification procedures</li>
+            <li>Employee accountability</li>
+            <li>Cleaning quality monitoring</li>
+        </ul>
+
+        <h3>💡 Practical Value</h3>
+
+        <p>
+            The project provides a structured approach to cleaning
+            operations by establishing clear procedures and
+            inspection points that support consistency,
+            accountability and service quality.
+        </p>
+
+        <a href="#projects" class="button">Back to Projects</a>
+
+        <a href="#home" class="button">Back to Top</a>
+
+    </div>
+
+</section>
+<section id="workplace-project">
+
+    <h2>Workplace Process Improvement</h2>
+
+    <div class="project-detail">
+
+        <h3>🏢 Project Overview</h3>
+
+        <p>
+            Practical workplace initiatives focused on improving daily
+            operations, coordination, service quality and organizational
+            efficiency.
+        </p>
+
+        <h3>🎯 Purpose</h3>
+
+        <p>
+            These initiatives focus on identifying operational challenges,
+            improving existing processes and developing practical solutions
+            that support employees and workplace performance.
+        </p>
+
+        <h3>⚙️ Key Areas</h3>
+
+        <ul>
+            <li>Workplace process improvement</li>
+            <li>Operational coordination</li>
+            <li>Employee supervision and duty assignment</li>
+            <li>Facility and general service management</li>
+            <li>Workplace inspections and service monitoring</li>
+            <li>Administrative coordination and reporting</li>
+            <li>Problem identification and practical solutions</li>
+        </ul>
+
+        <h3>💡 Practical Value</h3>
+
+        <p>
+            The project reflects a practical approach to improving
+            workplace operations through coordination, monitoring,
+            clear procedures and solutions to day-to-day operational
+            challenges.
+        </p>
+
+        <a href="#projects" class="button">Back to Projects</a>
+
+        <a href="#home" class="button">Back to Top</a>
+
+    </div>
+
+</section>
+
+<section id="digital-project">
+
+    <h2>Digital Learning & Application Development</h2>
+
+    <div class="project-detail">
+
+        <h3>💻 Project Overview</h3>
+
+        <p>
+            An ongoing technology learning initiative focused on developing
+            practical digital solutions and applications for workplace and
+            everyday business needs.
+        </p>
+
+        <h3>🎯 Purpose</h3>
+
+        <p>
+            The initiative combines self-directed learning with practical
+            application development to explore how technology can improve
+            workplace processes, record keeping, reporting and information
+            management.
+        </p>
+
+        <h3>⚙️ Current Areas of Development</h3>
+
+        <ul>
+            <li>Android application development</li>
+            <li>Computer-based business applications</li>
+            <li>Digital record management</li>
+            <li>Workplace automation concepts</li>
+            <li>Database and information management</li>
+            <li>Website development</li>
+            <li>Practical problem-solving through technology</li>
+        </ul>
+
+        <h3>💡 Practical Value</h3>
+
+        <p>
+            These learning projects demonstrate an interest in using
+            technology to create practical solutions, organize information
+            and support more efficient workplace processes.
+        </p>
+
+        <a href="#projects" class="button">Back to Projects</a>
+
+        <a href="#home" class="button">Back to Top</a>
+
+    </div>
+
+</section>
+
+<section id="design-project">
+
+    <h2>Graphic Design & Creative Work</h2>
+
+    <div class="project-detail">
+
+        <h3>🎨 Project Overview</h3>
+
+        <p>
+            A creative development area focused on graphic design,
+            visual communication and the use of digital tools to create
+            practical and professional visual materials.
+        </p>
+
+        <h3>🎯 Purpose</h3>
+
+        <p>
+            The project supports continuous development of creative and
+            digital design skills for professional, workplace and personal
+            communication needs.
+        </p>
+
+        <h3>⚙️ Creative Areas</h3>
+
+        <ul>
+            <li>Graphic design</li>
+            <li>Digital visual communication</li>
+            <li>Professional document design</li>
+            <li>Creative content development</li>
+            <li>Digital design tools</li>
+            <li>Continuous creative learning</li>
+        </ul>
+
+        <h3>💡 Practical Value</h3>
+
+        <p>
+            This area demonstrates an interest in combining creativity
+            and technology to develop clear, useful and professional
+            visual materials for communication and workplace needs.
+        </p>
+
+        <a href="#projects" class="button">Back to Projects</a>
+
+        <a href="#home" class="button">Back to Top</a>
+
+    </div>
+
+</section>
+
+<!-- CV -->
+<section id="cv">
+
+    <h2>My Curriculum Vitae</h2>
+
+    <div class="about">
+
+        <p>
+            For a detailed overview of my education, professional experience,
+            skills and qualifications, please view or download my Curriculum
+            Vitae.
+        </p>
+
+        <a href="Abel_Tadesse_CV.pdf" class="button">
+            Download My CV
+        </a>
+
+    </div>
+
+</section>
+    <!-- Contact -->
+
+<section id="contact">
+
+    <h2>Contact Me</h2>
+
+    <div class="contact">
+
+        <p>
+            I am open to professional opportunities, collaboration,
+            management-related projects and other opportunities where
+            I can contribute my skills and experience.
+        </p>
+
+        <br>
+
+        <p>
+            <strong>Location:</strong> Addis Ababa, Ethiopia
+        </p>
+
+        <br>
+
+        <p>
+            <strong>Email:</strong>
+            <a href="mailto:belatadesse5@gmail.com">
+                belatadesse5@gmail.com
+            </a>
+        </p>
+
+        <br>
+
+        <p>
+            <strong>Phone:</strong>
+            <a href="tel:+251910461028">
+                +251 910461028
+            </a>
+        </p>
+
+        <br>
+
+        <p>
+            <strong>Professional Focus:</strong>
+            HR, Administration, General Services & Operations
+        </p>
+
+    </div>
+
+</section>
+
+
+    <!-- Footer -->
+
+	<footer>
+
+    	<p>
+            © 2026 Abel Tadesse - Professional Portfolio
+   	</p>
+
+        <p>
+        HR | Administration | General Services | Operations
+        </p>
+
+	</footer>
+
+</body>
+
+</html>
